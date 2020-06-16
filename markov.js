@@ -19,7 +19,7 @@ class MarkovMachine {
   makeChains() {
     let markov_obj = {};
     let words = this.words;
-    for(let i = 0; i < words.length; i++) {
+    for (let i = 0; i < words.length; i++) {
       let curWord = words[i];
       let nextWord = words[i + 1] ? words[i + 1] : null;
 
@@ -54,7 +54,10 @@ class MarkovMachine {
   }
 }
 
-
 function getRandomNum(max) {
   return Math.floor(Math.random() * max);
+}
+
+module.exports = {
+  MarkovMachine
 }
